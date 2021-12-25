@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gaoqian.entity.Emp" table="emp">
+        <id name="empno" type="java.lang.Integer">
+            <column name="empno"></column>
+        </id>
+        <property name="ename" type="java.lang.String">
+            <column name="ename"></column>
+        </property>
+        <property name="job" type="java.lang.String">
+            <column name="job"></column>
+        </property>
+        <property name="mgr" type="java.lang.Integer">
+            <column name="mgr"></column>
+        </property>
+        <property name="hiredate" type="java.util.Date">
+            <column name="hiredate"></column>
+        </property>
+        <property name="sal" type="java.lang.Integer">
+            <column name="sal"></column>
+        </property>
+        <property name="comm" type="java.lang.Integer">
+            <column name="comm"></column>
+        </property>
+        <property name="deptno" type="java.lang.Integer">
+            <column name="deptno"></column>
+        </property>
+
+        <!--
+                <many-to-one name="dept" class="com.gaoqian.entity.Dept" column="deptno" ></many-to-one>
+        -->
+    </class>
+
+</hibernate-mapping>
