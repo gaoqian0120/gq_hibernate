@@ -40,16 +40,14 @@ public class TestBodyController {
         Query query = session.createQuery("from Student");
         //2.调用Query方法 得到结果集
         List<Student> list = query.list();
-        /*for (Student student : list) {
+        for (Student student : list) {
             System.out.println(student
             );
-        }*/
+        }
 
         session.close();
         sessionFactory.close();
 
-
         return list.toString();
     }
-
 }
