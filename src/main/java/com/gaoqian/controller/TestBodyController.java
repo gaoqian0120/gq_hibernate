@@ -41,8 +41,7 @@ public class TestBodyController {
         //2.调用Query方法 得到结果集
         List<Student> list = query.list();
         for (Student student : list) {
-            System.out.println(student
-            );
+            System.out.println(student);
         }
 
         session.close();
