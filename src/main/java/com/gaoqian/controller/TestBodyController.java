@@ -27,7 +27,7 @@ public class TestBodyController {
     }
     @RequestMapping("/student.do")
     @ResponseBody
-    public String student(String tableName){
+    public List student(){
         //创建Configuration
         Configuration configuration = new Configuration().configure();
         //获取SessionFactory
@@ -37,16 +37,16 @@ public class TestBodyController {
         //开启事务
         Transaction transaction = session.beginTransaction();
         //1.创建Query对象
-        Query query = session.createQuery("from "+tableName);
+        Query query = session.createQuery("from Student");
         //2.调用Query方法 得到结果集
-        List list = query.list();
-      /*  for (Student student : list) {
+        List<Student> list = query.list();
+        for (Student student : list) {
             System.out.println(student);
-        }*/
+        }
 
         session.close();
         sessionFactory.close();
 
-        return list.toString();
+        return list;
     }
 }
