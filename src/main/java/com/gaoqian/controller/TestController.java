@@ -4,13 +4,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Date;
+
 @Controller
 public class TestController {
     @RequestMapping("/some.do")
-    public ModelAndView dosome(){
+    public ModelAndView dosome(){   
 
         ModelAndView mv = new ModelAndView();
-        mv.addObject("msg","出理了some.do请求");
+        mv.addObject("msg",/*"出理了some.do请求"*/new Date());
         mv.addObject("fun","执行dosome方法|");
         mv.getModel().put("name", "caoyc");
         mv.setViewName("/show");

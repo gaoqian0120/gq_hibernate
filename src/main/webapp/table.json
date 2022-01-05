@@ -1,0 +1,21 @@
+{
+  "code": 0,
+  "msg": null,
+  "count": 3,
+  "data": [
+    {
+      "deviceNumber": "F10006",
+      "deviceName": "东软CT",
+      "deviceType": "Neuviz-twin"
+    }, {
+      "deviceNumber": "F10003",
+      "deviceName": "东软MR",
+      "deviceType": "NSM-P035"
+    }, {
+      "deviceNumber": "F10004",
+      "deviceName": "新区CT",
+      "deviceType": "Neuviz128"
+    }
+  ]
+}
+

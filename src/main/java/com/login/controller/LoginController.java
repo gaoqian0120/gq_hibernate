@@ -1,4 +1,4 @@
-package com.gaoqian.controller;
+package com.login.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,17 +13,17 @@ import java.util.Date;
  * @Description: TODO
  * */
 @Controller
-@RequestMapping("/demo")
-public class DemoController {
+@RequestMapping("/index")
+public class LoginController {
 
-    @RequestMapping("/hello.do")
-    public ModelAndView dohello(){
+    @RequestMapping("/login.do")
+    public ModelAndView dologin(){
 
         ModelAndView modelAndView=new ModelAndView();
-        modelAndView.addObject("date",new Date());
+//        modelAndView.addObject("date",new Date());
 //        System.out.println(date);
 
-        modelAndView.setViewName("show");
+        modelAndView.setViewName("login");
         return modelAndView;
     }
 }
