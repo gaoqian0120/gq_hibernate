@@ -19,8 +19,8 @@ public class Test {
         //获取session
         Session session = sessionFactory.openSession();
         Student student = new Student();
-        student.setSno("s200");
-        student.setSname("张三");
+        student.setSno("s221");
+        student.setSname("张");
         student.setSage(18);
         student.setSsex("男");
         session.save(student);

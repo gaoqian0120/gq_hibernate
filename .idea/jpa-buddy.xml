@@ -4,5 +4,6 @@
     <option name="defaultUnitInitialized" value="true" />
     <option name="reverseEngineeringLastDbConnectionId" value="27936b9e-e17a-4f47-83a9-c0e9a5627fa0" />
     <option name="reLastEntityCreationPackage" value="src/main/java/com/gaoqian/entity" />
+    <option name="newEntityIdStrategy" />
   </component>
 </project>

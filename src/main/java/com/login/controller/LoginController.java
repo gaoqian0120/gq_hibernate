@@ -4,8 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Date;
-
 /**
  * @author gq
  * @Title: DemoController
@@ -23,7 +21,7 @@ public class LoginController {
 //        modelAndView.addObject("date",new Date());
 //        System.out.println(date);
 
-        modelAndView.setViewName("login");
+        modelAndView.setViewName("login/login");
         return modelAndView;
     }
 }

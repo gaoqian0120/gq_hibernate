@@ -18,6 +18,7 @@
         <property name="hibernate.c3p0.max_size">30</property><!--最大连接数-->
         <property name="hibernate.c3p0.min_size">5</property><!--最小连接数-->
         <property name="hibernate.c3p0.max_statements">10</property><!--相当于线程数-->
+
         <!--方言-->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <!--打印sql语句-->
@@ -31,5 +32,8 @@
         <mapping resource="com/gaoqian/entity/People.hbm.xml"/>
         <mapping resource="com/gaoqian/entity/AA.hbm.xml"/>
         <mapping resource="com/gaoqian/entity/Emp.hbm.xml"/>
+        <mapping resource="com/gaoqian/entity/Dept.hbm.xml"/>
+        <mapping resource="com/gaoqian/entity/Salgrade.hbm.xml"/>
+        <mapping resource="com/gaoqian/entity/User.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

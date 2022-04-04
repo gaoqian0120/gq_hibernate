@@ -14,13 +14,13 @@ public class TestEmp {
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         //获取session
 //        Session session = sessionFactory.getCurrentSession();
-        Session currentSession = sessionFactory.getCurrentSession();
+        Session session = sessionFactory.openSession();
         Student student = new Student();
-        student.setSno("s400");
+        student.setSno("s10");
         student.setSname("王七");
         student.setSage(19);
         student.setSsex("男");
-        currentSession.save(student);
+        session.save(student);
        /* Emp emp = new Emp();
         emp.setEmpno(100);
         emp.setEname("gaoqian");
@@ -46,6 +46,6 @@ public class TestEmp {
       /* AA aa = new AA();
         aa.setA("aa");*/
         //   session.save();
-        currentSession.close();
+        session.close();
     }
 }

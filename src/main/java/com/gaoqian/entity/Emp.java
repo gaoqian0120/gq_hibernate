@@ -16,7 +16,7 @@ public class Emp {
     private Integer deptno;
 
 
-    public Integer getEmpno() {
+   /* public Integer getEmpno() {
         return empno;
     }
 
@@ -78,5 +78,5 @@ public class Emp {
 
     public void setDeptno(Integer deptno) {
         this.deptno = deptno;
-    }
+    }*/
 }

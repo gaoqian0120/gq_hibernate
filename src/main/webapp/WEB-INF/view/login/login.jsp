@@ -14,16 +14,16 @@
         <title>Title</title>
         <style type="text/css">
             body{
-                background-image:  url(../../images/login.jpg);
+                background-image:  url(../../../images/BJ.jpg);
                 background-size:cover;
             }
         </style>
-    <link rel="stylesheet" href="./././layui/css/layui.css">
-    <link rel="stylesheet" href="layui/css/layui.css">
-    <link rel="stylesheet" href="layui/css/layui.css" media="all">
-    <link rel="stylesheet" href="./././layui/css/layui.css" media="all">
-    <script src="js/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="layui/css/adminLogin.css">
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../layui/css/layui.css" media="all">
+    <script src="../../../js/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../../layui/css/adminLogin.css">
 
 </head>
 <body >
@@ -46,7 +46,7 @@
 <div class="wrap">
     <%--<img src="images/back.jpg" class="imgStyle">--%>
     <div class="loginForm">
-        <form>
+        <form method="post">
             <div class="logoHead">
                 <!--<h2 style="margin-top: 15px">房产销售平台管理系统</h2>-->
             </div>
@@ -70,25 +70,25 @@
                  </pre>
                 </div>
             </div>
-            <div class="usernameWrapDiv">
+           <%-- <div class="usernameWrapDiv">--%>
              <%--   <div class="usernameLabel">
                     <label>验证码:</label>
                 </div>--%>
                 <div class="cardDiv">
-               <pre>验证码:   <input id="loginCard" class="layui-input cardInput" type="text" name="card" placeholder="输入验证码">
-               </pre>
+                    <div style="height: 22px"><pre style="height: 22px">验证码:   <input id="loginCard" class="layui-input cardInput" type="text" name="card" placeholder="输入验证码"><img src="../images/a.png" style="height: 26.3px ; width: 44.8px ; top: 5px">
+                    </pre></div>
                 </div>
-                <div class="codeDiv">
+               <%-- <div class="codeDiv">
                     <input id="loginCode" class="layui-input codeInput"  type="button">
-                </div>
-            </div>
+                </div>--%>
+          <%--  </div>--%>
             <div class="usernameWrapDiv">
-                <div class="submitLabel">
+                <div class="submitLabel" style="top: 500px;height: 200px"><br/>
                     <label>没有账号？<a href="#" id="loginRegister">点击注册</a></label>
                 </div>
                 <div class="submitDiv">
                    <%-- <input id="loginBtn" type="button" class="submit layui-btn layui-btn-primary" value="登录"></input>--%>
-                       <button class="layui-btn">登录</button>
+                       <button id="btn" name="loginbtn" class="layui-btn" onclick="return loginfun()">登录</button>
                 </div>
             </div>
         </form>
@@ -96,6 +96,31 @@
 </div>
 <script src="./js/layui/layui.js" type="text/javascript"></script>
 <script>
+    function loginfun(){
+        if(document.getElementById("loginUsername").value=='')
+        {
+            alert("用户名不能为空");
+            return false;
+        }
+        if(document.getElementById("loginPassword").value=='')
+        {
+            alert("密码不能为空");
+            return false;
+        }
+        if(document.getElementById("loginCard").value=='')
+        {
+            alert("验证码不能为空");
+            return false;
+        }
+        if(document.getElementById("loginCard").value!="5374")
+        {
+            alert("验证码错误")
+            return false;
+        }
+        $('#loginbtn').href('demo/hello.do');
+    }
+
+
     layui.use(['layer'],function () {
         var layer = layui.layer;
     })

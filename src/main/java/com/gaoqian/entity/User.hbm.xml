@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gaoqian.entity.User" table="user"><!--实体类映射，包名加类名-->
+        <id name="username" type="java.lang.String"><!--主键-->
+            <column name="username"></column><!--表字段-->
+        </id>
+        <property name="password" type="java.lang.String"><!--其他字段-->
+            <column name="password"></column>
+        </property>
+    </class>
+
+
+</hibernate-mapping>
