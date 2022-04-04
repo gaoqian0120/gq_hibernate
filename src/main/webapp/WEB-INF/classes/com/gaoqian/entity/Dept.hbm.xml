@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gaoqian.entity.Dept" table="dept">
+        <id name="deptno" type="java.lang.Integer">
+            <column name="deptno"></column>
+        </id>
+        <property name="dname" type="java.lang.String">
+            <column name="dname"></column>
+        </property>
+        <property name="loc" type="java.lang.String">
+            <column name="loc"></column>
+        </property>
+        <!-- <set name="emp" table="emp" >
+             <key column="deptno"></key>
+             <one-to-many class="com.gaoqian.entity.Emp"></one-to-many>
+         </set>-->
+    </class>
+
+</hibernate-mapping>
